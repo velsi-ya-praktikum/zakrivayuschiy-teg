@@ -15,6 +15,306 @@
 */
 
 .page {
+  color: var(--color, #00cc14);
+  font-family: var(--font-main, Arial), sans-serif;
+  background-color: var(--bg-color, #000);
+  background-image: var(--background-patter, url(../svg/pattern-dark.svg));
+  background-repeat: repeat;
+  background-size: 4px;
+  background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+}
+
+.header {
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  gap: 13px;
+  margin: 100px auto;
+  border: 2px solid var(--color, #00cc14);
+  padding-top: clamp(7.25rem, 1.315vw + 6.942rem, 8.125rem);
+  padding-bottom: 25px;
+  font-family: var(--font-accent), monospace;
+  text-transform: uppercase;
+  inline-size: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);
+}
+
+.header, .card, .button {
+  background-color: var(--bg-color);
+}
+
+.header__title {
+  font-weight: 400;
+  font-size: clamp(0.875rem, 0.845vw + 0.677rem, 1.438rem);
+  text-transform: uppercase;
+}
+
+.header__paragraph {
+  font-size: clamp(3.063rem, 1.502vw + 2.71rem, 4.063rem);
+  text-wrap: nowrap;
+}
+
+
+.header__theme-menu {
+  margin-inline-start: 20px;
+  padding-block-start: 8px;
+}
+
+.theme-menu__list {
+  display: grid;
+  justify-content: center;
+  gap: 9px;
+}
+
+.theme-menu__button {
+  position: relative;
+  border: none;
+  font-family: var(--font-accent), monospace;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  /*transition: opacity 0.3s ease;*/
+  cursor: pointer;
+}
+
+.theme-menu__button::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  display: block;
+  text-align: start;
+  background-color: currentColor;
+  /*transition: transform 0.3s;*/
+  transform: scaleX(0);
+  transform-origin: 0;
+  inline-size: 100%;
+  block-size: 2px;
+}
+
+.theme-menu__button:focus-visible::after {
+  /*transition: transform 0.3s;*/
+  transform: scaleX(1);
+}
+
+.theme-menu__button:focus-visible {
+  opacity: 0.6;
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.theme-menu__button:disabled::before {
+  content: '▶';
+  position: absolute;
+  left: -21px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--color, #00cc14);
+  font-family: var(--font-main), sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  font-variation-settings: 'wght' var(--font-card-text-weight, 465);
+}
+
+.card__title {
+  padding: 4px 10px 6px;
+  font-size: inherit;
+  font-variation-settings: 'wght' var(--font-card-title-weight, 785);
+  
+}
+
+.card__image {
+  display: block;
+  border-block-start: 2px solid var(--color, #00cc14);
+  border-block-end: 2px solid var(--color, #00cc14);
+  object-fit: cover;
+  object-position: center;
+  inline-size: 100%;
+}
+
+.card__content {
+  display: grid;
+  gap: 27px;
+  margin: 25px;
+}
+
+.button {
+  position: relative;
+  border: 2px solid var(--color, #00cc14);
+  color: var(--color);
+  font-family: var(--font-accent), monospace;
+  font-size: 14px;
+  line-height: 90%;
+  /*transition: color 1s ease;*/
+  cursor: pointer;
+}
+
+.button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--color, #00cc14);
+  /*transition: transform 0.5s ease-in-out;*/
+  transform: scaleX(0);
+  transform-origin: 0;
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+.button:hover {
+  color: var(--bg-color, #000);
+  /*transition: color 1s ease;*/
+}
+
+.button:hover::after {
+  /*transition: transform 0.5s ease-in-out;*/
+  transform: scaleX(1);
+}
+
+.card__like-button {
+  
+  inline-size: 130px;
+  block-size: 38px;
+}
+
+/*.button {*/
+/*  transition: box-shadow 0.3s ease, color 1s ease;*/
+/*}*/
+
+.button:focus-visible {
+  box-shadow: 2px 2px currentColor;
+  /*transition: box-shadow 0.3s ease;*/
+}
+
+.card__icon-button {
+  display: flex;
+  align-items: center;
+  border: none;
+}
+
+.card__footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 7px;
+  margin: 0 25px 25px;
+}
+
+
+.button__text {
+  position: relative;
+  z-index: 2;
+  color: inherit;
+  text-wrap: nowrap;
+}
+
+.button__save {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-block-end: 100px;
+  padding: 15px 20px;
+}
+
+.button__save svg {
+  position: relative;
+  z-index: 2;
+  width: 21px;
+  height: 21px;
+}
+
+.main {
+  display: grid;
+  justify-items: center;
+  gap: 50px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.card__icon-button:focus-visible {
+  outline: 2px solid var(--color);
+}
+
+.sparks, .core, .main-body {
+  opacity: 0;
+}
+
+.like-icon {
+  cursor: pointer;
+  block-size: 36px;
+  inline-size: 36px;
+}
+
+.like-icon:hover .core {
+  opacity: 1;
+  /*transition: opacity 0.3s;*/
+}
+
+.like-icon:hover .main-body {
+  opacity: 1;
+  /*transition: opacity 0.05s 0.3s;*/
+}
+
+.like-icon:active .core {
+  fill: #f00;
+  /*transition: fill 0.3s;*/
+}
+
+.like-icon:active .main-body {
+  fill: #f00;
+  /*transition: fill 0.05s 0.3s;*/
+}
+
+.like-icon.is-liked .core {
+  opacity: 1;
+  fill: #f00;
+  /*transition: opacity 0.3s;*/
+}
+
+.like-icon.is-liked .main-body {
+  opacity: 1;
+  fill: #f00;
+  /*transition: opacity 0.05s 0.3s;*/
+}
+
+.contour {
+  fill: var(--color, #00cc14);
+  /*transition: fill 0.1s linear;*/
+}
+
+.like-icon.is-liked .contour {
+  fill: #f00;
+  /*transition: fill 0.06s 0.3s;*/
+}
+
+.heart {
+  transform-origin: center;
+}
+
+
+@media (width <= 376px) {
+  .button__save {
+    display: grid;
+    justify-items: center;
+  }
+  
+  .button__save svg {
+    block-size: 28px;
+    inline-size: 28px;
+  }
 }
