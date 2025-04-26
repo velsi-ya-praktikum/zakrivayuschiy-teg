@@ -13,36 +13,30 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
 @keyframes menu-arrow {
-  0% {
+  from {
     transform: translateX(0);
   }
-  100% {
+  to {
     transform: translateX(4px);
   }
 }
 
 @keyframes beat {
-  0% {
+  from {
     transform: scale(1);
   }
-  50% {
+  to {
     transform: scale(1.5);
-  }
-  100% {
-    transform: scale(1);
   }
 }
 
 
 @keyframes sparks {
-  0% {
+  from {
     opacity: 0;
   }
-  50% {
+  to {
     opacity: 1;
-  }
-  100% {
-    opacity: 0;
   }
 }
 
@@ -55,6 +49,10 @@
     transition: transform 0.3s ease;
   }
   
+  .theme-menu__button:hover {
+    transition: opacity 0.3s ease;
+  }
+  
   .button {
     transition: box-shadow 0.3s ease, color 1s ease;
   }
@@ -64,18 +62,18 @@
   }
   
   .core {
-    transition: opacity 0.03s 0.3s;
+    transition: opacity 0.3s 0.03s;
   }
   
   .main-body,
   .like-icon:hover .core,
   .like-icon.is-liked .core {
-    transition: opaciy 0.3s;
+    transition: opacity 0.3s;
   }
   
   .like-icon:hover .main-body,
   .like-icon.is-liked .main-body {
-    transition: opacity 0.05s 0.3s;
+    transition: opacity 0.3s 0.05s;
   }
   
   .like-icon:active .core {
@@ -83,11 +81,11 @@
   }
   
   .like-icon:active .main-body {
-    transition: fill 0.05s 0.3s;
+    transition: fill 0.3s 0.05s;
   }
   
   .like-icon.is-liked .heart {
-    animation: beat 0.1s 0.3s ease-in alternate;
+    animation: beat 0.3s 0.1s ease-in alternate;
   }
   
   .contour {
@@ -95,7 +93,7 @@
   }
   
   .like-icon.is-liked .contour {
-    transition: fill 0.06s 0.3s;
+    transition: fill 0.3s 0.06s;
   }
   
   .like-icon.is-liked .sparks {
