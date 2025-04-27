@@ -30,10 +30,10 @@
   display: grid;
   justify-items: center;
   justify-content: center;
-  gap: 13px;
+  gap: 20px;
   margin: 100px auto;
   border: 2px solid var(--color, #00cc14);
-  padding-block-start: clamp(7.25rem, 1.315vw + 6.942rem, 8.125rem);
+  padding-block-start: clamp(7.5rem, 1.373vw + 7.264rem, 8.5rem);
   padding-block-end: 25px;
   font-family: var(--font-accent), monospace;
   text-transform: uppercase;
@@ -52,19 +52,21 @@
 
 .header__paragraph {
   font-size: clamp(3.063rem, 1.502vw + 2.71rem, 4.063rem);
+  line-height: 100%;
   text-wrap: nowrap;
 }
 
 
 .header__theme-menu {
   margin-inline-start: 20px;
-  padding-block-start: 8px;
+  margin-block-start: 4px;
 }
 
 .theme-menu__list {
   display: grid;
   justify-content: center;
-  gap: 9px;
+  gap: 11px;
+  line-height: 100%;
 }
 
 .theme-menu__button {
@@ -124,7 +126,7 @@
 }
 
 .card__title {
-  padding: 4px 10px 6px;
+  padding: 5px 10px 5px;
   font-size: inherit;
   font-variation-settings: 'wght' var(--font-card-title-weight, 785);
   

@@ -49,7 +49,7 @@
     transition: transform 0.3s ease;
   }
   
-  .theme-menu__button:hover {
+  .theme-menu__button {
     transition: opacity 0.3s ease;
   }
   
