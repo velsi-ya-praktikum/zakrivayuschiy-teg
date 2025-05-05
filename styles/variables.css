@@ -5,7 +5,21 @@
   --card-text-weight: 465;
   --card-title-weight: 785;
   
-  --background-patter: url(../svg/pattern-dark.svg);
+  --background-image: repeating-linear-gradient(
+      to right,
+      #000 0 2px,
+      transparent 2px 4px
+  ),
+  repeating-linear-gradient(
+      to bottom,
+      #000 0 2px,
+      transparent 2px 4px
+  ),
+  repeating-linear-gradient(
+      to bottom,
+      #007f0c,
+      #004306
+  );
   
   --color: #00cc14;
   --bg-color: #000;
@@ -14,4 +28,5 @@
   
   --heart-countour-color: #00cc14;
   --heart-sparks-color: #f00;
+  --button-text-color: #00cc14;
 }
