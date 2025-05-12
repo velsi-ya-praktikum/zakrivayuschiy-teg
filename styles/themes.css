@@ -30,33 +30,6 @@
   --button-text-color: #00cc14;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color: #00cc14;
-    --bg-color: #000;
-    --font-card-text-weight: 465;
-    --font-card-title-weight: 785;
-    --heart-countour-color: #00cc14;
-    --background-image: repeating-linear-gradient(
-        to right,
-        #000 0 2px,
-        transparent 2px 4px
-    ),
-    repeating-linear-gradient(
-        to bottom,
-        #000 0 2px,
-        transparent 2px 4px
-    ),
-    repeating-linear-gradient(
-        to bottom,
-        #007f0c,
-        #004306
-    );
-    --card-image-title-text-shadow-color: #000;
-    --button-text-color: #00cc14;
-  }
-}
-
 .page.theme-light {
   --color: #000;
   --bg-color: #fff;

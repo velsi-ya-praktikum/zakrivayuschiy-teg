@@ -17,10 +17,12 @@
 .page {
   color: var(--color, #00cc14);
   font-family: var(--font-main, Arial), sans-serif;
+  background: var(--background-image,
+  repeating-linear-gradient(to right, #000 0 2px, transparent 2px 4px),
+  repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px),
+  linear-gradient(to bottom, #007f0c, #004306)) left top / cover fixed;
   background-color: var(--bg-color, #000);
-  background-image: var(--background-image);
-  background-size: cover;
-  background-attachment: fixed;
+  font-variation-settings: 'wght' var(--font-card-text-weight, 465);
   min-inline-size: 320px;
   min-block-size: 100dvb;
 }
@@ -121,7 +123,6 @@
   font-family: var(--font-main), sans-serif;
   font-size: 18px;
   line-height: 21px;
-  font-variation-settings: 'wght' var(--font-card-text-weight, 465);
 }
 
 .card__title {
@@ -155,7 +156,7 @@
   0 1px var(--card-image-title-text-shadow-color, #000),
   1px 0 var(--card-image-title-text-shadow-color, #000),
   0 -1px var(--card-image-title-text-shadow-color, #000);
-  inset-block-start: 27px;
+  inset-block-start: 25px;
   inset-inline-end: 25px;
   mix-blend-mode: hard-light;
 }
@@ -178,7 +179,7 @@
 .button {
   position: relative;
   border: 2px solid var(--color, #00cc14);
-  color: var(--color);
+  color: var(--color, #00cc14);
   font-family: var(--font-accent), fantasy;
   font-size: 14px;
   line-height: 90%;
@@ -263,7 +264,7 @@
 }
 
 .card__icon-button:focus-visible {
-  outline: 2px solid var(--color);
+  outline: 2px solid var(--color, #00cc14);
 }
 
 .sparks, .core, .main-body {
@@ -335,9 +336,13 @@ dialog[open] {
   background-color: rgb(0 0 0 / 0.75);
 }
 
-.dialog__button {
+.dialog__form {
   grid-column: span 2;
+}
+
+.dialog__button {
   block-size: 38px;
+  inline-size: 100%;
 }
 
 .filter__brightness {
@@ -380,7 +385,11 @@ dialog[open] {
     inline-size: 28px;
   }
   
+  .card__image-title {
+    inset-inline-end: 11px;
+  }
+  
   .dialog {
-    padding: 30px 42px;
+    padding: 30px 40px;
   }
 }

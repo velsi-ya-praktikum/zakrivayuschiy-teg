@@ -15,7 +15,7 @@
       #000 0 2px,
       transparent 2px 4px
   ),
-  repeating-linear-gradient(
+  linear-gradient(
       to bottom,
       #007f0c,
       #004306
