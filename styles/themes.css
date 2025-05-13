@@ -11,18 +11,23 @@
   --font-card-text-weight: 465;
   --font-card-title-weight: 785;
   --heart-countour-color: #00cc14;
-  --background-patter: url(../svg/pattern-dark.svg);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color: #00cc14;
-    --bg-color: #000;
-    --font-card-text-weight: 465;
-    --font-card-title-weight: 785;
-    --heart-countour-color: #00cc14;
-    --background-patter: url(../svg/pattern-dark.svg);
-  }
+  --background-image: repeating-linear-gradient(
+      to right,
+      #000 0 2px,
+      transparent 2px 4px
+  ),
+  repeating-linear-gradient(
+      to bottom,
+      #000 0 2px,
+      transparent 2px 4px
+  ),
+  repeating-linear-gradient(
+      to bottom,
+      #007f0c,
+      #004306
+  );
+  --card-image-title-text-shadow-color: #000;
+  --button-text-color: #00cc14;
 }
 
 .page.theme-light {
@@ -31,7 +36,23 @@
   --font-card-text-weight: 400;
   --font-card-title-weight: 700;
   --heart-countour-color: #000;
-  --background-patter: url(../svg/pattern-light.svg);
+  --background-image: repeating-linear-gradient(
+      to right,
+      #d3d3d3 0 2px,
+      transparent 2px 4px
+  ),
+  repeating-linear-gradient(
+      to bottom,
+      #d3d3d3 0 2px,
+      transparent 2px 4px
+  ),
+  repeating-linear-gradient(
+      to bottom,
+      #e7e7e7 0.01%,
+      #1a1a1a
+  );
+  --card-image-title-text-shadow-color: #fff;
+  --button-text-color: #fff;
 }
 
 @media (prefers-color-scheme: light) {
@@ -41,6 +62,22 @@
     --font-card-text-weight: 400;
     --font-card-title-weight: 700;
     --heart-countour-color: #000;
-    --background-patter: url(../svg/pattern-light.svg);
+    --background-image: repeating-linear-gradient(
+        to right,
+        #d3d3d3 0 2px,
+        transparent 2px 4px
+    ),
+    repeating-linear-gradient(
+        to bottom,
+        #d3d3d3 0 2px,
+        transparent 2px 4px
+    ),
+    repeating-linear-gradient(
+        to bottom,
+        #e7e7e7 0.01%,
+        #1a1a1a
+    );
+    --card-image-title-text-shadow-color: #fff;
+    --button-text-color: #fff;
   }
 }
